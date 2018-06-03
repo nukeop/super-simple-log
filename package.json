@@ -1,0 +1,34 @@
+{
+  "name": "super-simple-log",
+  "version": "1.0.0",
+  "description": "Extremely simple console logger utility",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint src && ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nukeop/super-simple-log.git"
+  },
+  "keywords": [
+    "log",
+    "logging",
+    "logger",
+    "simple"
+  ],
+  "author": "nukeop",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/nukeop/super-simple-log/issues"
+  },
+  "homepage": "https://github.com/nukeop/super-simple-log#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "log-symbols": "^2.2.0",
+    "moment": "^2.22.2"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "eslint": "^4.19.1"
+  }
+}
