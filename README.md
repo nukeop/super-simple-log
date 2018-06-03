@@ -1,4 +1,4 @@
-# super-simple-log
+# super-simple-log [![Build Status](https://travis-ci.org/nukeop/super-simple-log.svg?branch=master)](https://travis-ci.org/nukeop/super-simple-log)
 > Extremely simple console logger utility
 
 ## Installation
