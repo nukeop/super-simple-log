@@ -10,32 +10,32 @@ Log.logSymbol = function(level) {
   return logSymbols[level] || ' ';
 };
 
-Log.formatLogMessage = function(debugLevel, color, msg, time) {
-  return `${this.logSymbol(debugLevel)} ${chalk[color](debugLevel.toUpperCase())} - ${time} - ${msg}`;
+Log.formatLogMessage = function(debugLevel, color, time, ...msg) {
+  return `${this.logSymbol(debugLevel)} ${chalk[color](debugLevel.toUpperCase())} - ${time} - ${msg.join(' ')}`;
 };
 
-Log.log = function(debugLevel, color, msg) {
+Log.log = function(debugLevel, color, ...msg) {
   let time = moment().format(this.timeFormat);
-  console.log(this.formatLogMessage(debugLevel, color, msg, time));
+  console.log(this.formatLogMessage(debugLevel, color, time, ...msg));
 };
 
-Log.debug = function(msg) {
+Log.debug = function(...msg) {
   this.log('debug', 'gray', msg);
 };
 
-Log.info = function(msg) {
-  this.log('info', 'blue', msg);
+Log.info = function(...msg) {
+  this.log('info', 'blue', ...msg);
 };
 
-Log.success = function(msg) {
+Log.success = function(...msg) {
   this.log('success', 'green', msg);
 };
 
-Log.warning = function(msg) {
+Log.warning = function(...msg) {
   this.log('warning', 'yellow', msg);
 };
 
-Log.error = function(msg) {
+Log.error = function(...msg) {
   this.log('error', 'red', msg);
 };
 

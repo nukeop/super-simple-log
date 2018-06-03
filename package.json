@@ -1,6 +1,6 @@
 {
   "name": "super-simple-log",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Extremely simple console logger utility",
   "main": "index.js",
   "scripts": {

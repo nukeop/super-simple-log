@@ -13,7 +13,7 @@ test('tests if correct log symbols are returned', t => {
 });
 
 test('tests if log message is correctly built', t => {
-  t.deepEqual(log.formatLogMessage('info', 'blue', 'test', '123'),
+  t.deepEqual(log.formatLogMessage('info', 'blue', '123', 'test'),
 	      logSymbols['info'] + ' ' + chalk.blue('INFO') + ' - 123 - test' );
 });
 
@@ -28,5 +28,10 @@ test('tests logging levels', t => {
   log.success('success');
   log.warning('warning');
   log.error('error');
+  t.pass();
+});
+
+test('test logging multiple arguments', t=> {
+  log.info('test', 'another test');
   t.pass();
 });
